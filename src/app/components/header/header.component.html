@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid" bg-dark contenedor>
+    <a class="navbar-brand" href="#"><span><img src="/assets/imagenes/argentina_programa.png" style="max-height: 100px" alt=""> </span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="d-flex ">
+          <ul class="social iconos" style="display: flex;  list-style: none;">
+              <li><a href="https://web.whatsapp.com/"><img src="/assets/imagenes/whatsapp.png" height="25" width="25" style="margin: 4px;"></a></li>
+              <li><a href="https://github.com/"><img src="/assets/imagenes/github.png" height="25" width="25" style="margin: 4px;"></a></li>
+              <li><a href="https://www.google.com/search?q=gmail&oq=gmail&aqs=chrome..69i57j0i131i433i512j0i433i512j0i131i433i512l4j69i61.12734j0j4&sourceid=chrome&ie=UTF-8"><img src="/assets/imagenes/gmail.png" width="25" height="25" style="margin: 4px;"></a></li>
+          </ul>       
+      </div>
+    </div>
+    <button type="button" class="search-hover" (click)="login()" *ngIf="!isLogged">Inicio de sesion</button> 
+    <button type="button" class="search-hover" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesion</button>
+  </nav>

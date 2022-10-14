@@ -1,0 +1,37 @@
+<!--<p>nuevo-conoc works!</p>-->
+
+<div class="container" style="background-color:lightpink ;">
+    <div class="row">
+        <div 
+        [style.nombreCo]="(nombreCo)"
+         [style.width.%]="porcentajeCo"
+         role="progressbar"
+         aria-valuenow="40"
+         aria-valuemin="0" 
+         aria-valuemax="50" 
+         >
+    
+        </div>
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group" >
+                    <label for="nombreCo">Nombre de la skill</label>
+                    <input type="text" class="form-control" id="nombreCo" name="nombreCo"
+                   [(ngModel)]="nombreCo" required>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="porcentajeCo">Porcentaje de la skill</label>
+                    <input type="text" class="form-control" id="porcentajeCo" name="porcentajeCo"
+                    [(ngModel)]="porcentajeCo" required>
+                </div>
+                <button class="btn btn-outline-info">Agregar nueva skill</button>
+
+            </form>
+           
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="row">
+  
+    <h1>Experiencia laboral</h1>
+    <div class="col-lg-2">
+
+    </div>
+    <div class="col-lg-12">
+
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let ExperienciaLab of expe">
+            <td>
+              <h4>{{ExperienciaLab.nombreExp}}</h4>
+            </td>
+            <td>{{ExperienciaLab.descripcionExp}}</td>
+            
+
+          
+            <td *ngIf="isLogged">
+              <button class="btn btn-info" routerLink="/editexp/{{ExperienciaLab.id}}">
+            
+              <i class="bi bi-pen"></i>EDICION</button>
+            </td>
+          
+
+            <td *ngIf="isLogged">
+              <button class="btn btn-danger" (click)="borrarExp(ExperienciaLab.id)">
+              <i class="bi bi-trash"></i>BORRAR</button>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-outline-success" routerLink="/exp" *ngIf="isLogged">Nueva experiencia</button>
+    </div>
+
+  </div>
+
+
+
+
+
+<!-- <p class="lead"></p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Profesora de Ingles </li>
+          <p>A la edad de 16 años empece como ayudante de mi profesora de ingles. A la edad de 18 años empece a dar clases<br>
+          particulares en la casa dem mis padres. Hasta el dia de hoy sigo ejerciendo de la misma manera, pero ahora en mi hogar.</p>
+          <li class="list-group-item">Tesorera en cooperadora escolar</li> 
+        </ul> 
+        <hr class="my-4">
+        
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">edition</a>
+        </p>
+      </div>     
+    </div>  -->

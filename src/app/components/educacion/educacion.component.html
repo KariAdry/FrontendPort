@@ -1,0 +1,72 @@
+<div class="row">
+  
+  <h1>Educacion</h1>
+  <div class="col-lg-2">
+
+  </div>
+  <div class="col-lg-12">
+
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of ed">
+          <td>
+            <h4>{{Educacion.nombreEdu}}</h4>
+          </td>
+          <td>{{Educacion.descripcionEdu}}</td>
+
+        
+          <td *ngIf="isLogged">
+            <button class="btn btn-info" routerLink ="/edition/{{Educacion.id}}">
+          
+            <i class="bi bi-pen"></i>EDICION</button>
+          </td>
+        
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="borrarEducacion(Educacion.id)">
+            <i class="bi bi-trash"></i>BORRAR</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-outline-success" routerLink="/educa"
+     *ngIf="isLogged">Nueva instruccion</button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  <p>educacion works!</p>
+
+<div class="card col-md-12" style="margin: 10px;">
+    <div class="container-flex jumbotron jumbotron-fluid" style="margin: 10px ;float:right;">
+      <h1 class="display-4">Educacion:</h1>
+      <p class="lead">Gracias a Argentina Programa he tenido una capacitacion organizada en el campo de la programacion,<br>
+      previo a eso he estado incursionando de manera libre mediante tutoriales en Youtube.</p>
+      <img src="https://img2.freepng.es/20180729/bp/kisspng-logo-primera-air-organization-business-english-lan-british-flag-5b5e7d460d5b11.4916650115329191100547.jpg" alt="Descarga gratuita de  Imágen de Png" height="50px" width="50px" style= float:left; display="inline-block">
+      <p>Me he recibido como profesora de Ingles en el Instituto Oxford de Cultura Inglesa.</p>
+      <img src="https://ens11-caba.infd.edu.ar/sitio/wp-content/uploads/2020/06/logo-ens-11.png" alt="Escuela Normal Superior Nro. 11 &quot;Dr. Ricardo Levene&quot; DE 6°" height="50px" width="50px" style= float:left; display="inline-block">
+      <p>Tambien he estudiado en el Normal Nº 11 como maestra en nivel inicial</p>
+      <hr class="my-4">                
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">edition</a>
+      </p>
+    </div>
+-->
