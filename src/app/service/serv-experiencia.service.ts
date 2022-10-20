@@ -10,7 +10,7 @@ import { ExperienciaLab } from '../model/experiencia-lab';
 export class ServExperienciaService {
 
   //expURL = 'https://datosportfolio.herokuapp.com/explab/';
-  expURL = 'https://basedatport.herokuapp.com/explab/'
+  expURL = 'https://basedatport.herokuapp.com/explab/';
 
   
 

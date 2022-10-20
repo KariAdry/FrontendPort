@@ -20,7 +20,7 @@
                 
 
                     <td *ngIf="isLogged">
-                        <button class="btn btn-info" routerLink="/editando/{{conocimiento.id}}">
+                        <button class="btn btn-info" routerLink="editando/{{conocimiento.id}}">
 
                             <i class="bi bi-pen"></i>EDICION</button>
                     </td>
@@ -38,59 +38,7 @@
    
    
     <!--
-    <div class="container">
-    <div class="row">
-        <h2>Barras de progreso de conocimientos</h2>
-        <button type="button" class="btn btn-outline-success" routerLink="/know" *ngIf="isLogged">NUEVO
-            CONOCIMIENTO</button>
-
-        <div class="col-md-10">
-            <table class="table">
-                <tr *ngFor="let conocimiento of conocim">
-                    <h3 class="progress-title">{{conocimiento.nombreCo}}</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:65%; background:#1f75c4;">
-                            <span class="progress-icon fa fa-globe"></span>
-
-                            <div class="progress-value"><span> {{conocimiento.porcentajeCo}}</span>%</div>
-                            <div class="col-xl-4">
-                                <td *ngIf="isLogged">
-                                    <button class="btn btn-light"
-                                        style="display:flex;
-                                         float:right; 
-                                         position:absolute; 
-                                         background-color: blue;
-                                         justify-content: right;"
-                                        routerLink="/editskill/{{conocimiento.id}}">
-                                        <i class="bi bi-pen"></i>EDITAR</button>
-                                </td>
-                                <div class="col-xl-4">
-                                    <td *ngIf="isLogged">
-
-                                        <button class="btn-btn-danger" (click)="borrarConoc(conocimiento.id)">
-                                            <i class="bi bi-trash-fill"
-                                             style="display: flex; 
-                                             float: initial;
-                                              position: absolute;
-                                              background-color: coral;
-                                              justify-content: right;
-                                              "></i>BORRAR</button>
-
-                                    </td>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </tr>
-            </table>
-        </div>
-
-    </div>
-</div>
--->
-
-    <!--
-<div class="row">
+  <div class="row">
     <h2>Barras de progreso de conocimientos</h2>
 
     <div class="col-lg-2">

@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 //URL = 'https://datosportfolio.herokuapp.com/educacion/';
-URL= 'https://basedatport.herokuapp.com/educacion/'
+URL= 'https://basedatport.herokuapp.com/educacion/';
 
   constructor(private httpClient : HttpClient) { }
 

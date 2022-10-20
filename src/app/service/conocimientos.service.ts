@@ -8,7 +8,7 @@ import { Conocimientos } from '../model/conocimientos';
 })
 export class SkillsService {
 //URL= 'https://datosportfolio.herokuapp.com/cono/';
-URL= 'https://basedatport.herokuapp.com/'
+URL= 'https://basedatport.herokuapp.com/cono/';
 
   constructor(private httpClient : HttpClient) { }
 
@@ -24,7 +24,7 @@ public detail(id:number):Observable <Conocimientos>
 
 public save(conocimientos:Conocimientos): Observable <any>
 {
- return this.httpClient.post<any>(this.URL + `create/`,conocimientos);
+ return this.httpClient.post<any>(this.URL + `create`,conocimientos);
 }
 
 public update(id:number, conocimientos:Conocimientos):Observable <any>
