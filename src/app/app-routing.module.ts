@@ -1,6 +1,7 @@
 import {  NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { EditaracercadeComponent } from './components/acerca-de/editaracercade/editaracercade.component';
 import { EditconocComponent } from './components/conocimientos/editconoc/editconoc.component';
 import { NuevoConocComponent } from './components/conocimientos/nuevo-conoc/nuevo-conoc.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion.component';
@@ -19,8 +20,9 @@ const routes: Routes =
 {path:'educa', component:NuevaInstruccionComponent}, 
 {path:'edition/:id',component:EditarEducacionComponent},
 {path:'know',component:NuevoConocComponent},
-{path:'person',component:AcercaDeComponent},
-{path:'editando/:id',component:EditconocComponent}
+{path:'personas',component:AcercaDeComponent},
+{path:'editando/:id',component:EditconocComponent},
+{path:'edicionPersona/:id',component:EditaracercadeComponent}
 
 ];
 

@@ -21,6 +21,10 @@ import { EditarEducacionComponent } from './components/educacion/editar-educacio
 import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
 import { EditconocComponent } from './components/conocimientos/editconoc/editconoc.component';
 import { NuevoConocComponent } from './components/conocimientos/nuevo-conoc/nuevo-conoc.component';
+import { EditaracercadeComponent } from './components/acerca-de/editaracercade/editaracercade.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -42,7 +46,8 @@ import { NuevoConocComponent } from './components/conocimientos/nuevo-conoc/nuev
     EditarEducacionComponent,
     ConocimientosComponent,
     EditconocComponent,
-  	NuevoConocComponent
+  	NuevoConocComponent,
+   EditaracercadeComponent
     
   ],
   imports: [
@@ -50,6 +55,8 @@ import { NuevoConocComponent } from './components/conocimientos/nuevo-conoc/nuev
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
        
   ],
   providers: [InterceptorProvider],

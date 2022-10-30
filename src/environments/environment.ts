@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  URL:'http://localhost:8080/',
+  firebase: {
+    apiKey: "AIzaSyAZD-HoCfuAaKBbxT6uBguHNdjjKWWODhA",
+  authDomain: "frontendportfolio-b206c.firebaseapp.com",
+  projectId: "frontendportfolio-b206c",
+  storageBucket: "frontendportfolio-b206c.appspot.com",
+  messagingSenderId: "716417638846",
+  appId: "1:716417638846:web:7af446eebeecba080a59ef"
+  },
+ 
+  
+ //URL:'https://basedatport.herokuapp.com/'
 };
 
 /*

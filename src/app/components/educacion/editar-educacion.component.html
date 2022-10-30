@@ -16,6 +16,16 @@
                         [(ngModel)]="educacion.descripcionEdu" required>
 
                 </div>
+
+                <div class="img"><img class="img-load" src="{{image[0]}}" width="100px"></div>
+    <div class="form-group">
+        <label for="imagenURL" class="labelFile"></label>
+        <input type="file" class="labelInputFile" accept=".bmp, .gif , .jpg, .tif, .png, .jpeg"
+            (change)="loadImage($event)" id="imagenURL">
+    </div>
+
+    <button class="bttn-minimal bttn-md bttn-primary" [disabled]="loading" (click)="load()"> {{(loading)?
+        'Editando..': 'Actualizar Educación'}}</button>
 <button class="btn btn-danger">editar nueva-instruccion</button>
             </form>
         </div>

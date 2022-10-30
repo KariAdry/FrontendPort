@@ -1,20 +1,44 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { persona } from '../model/persona.model';
+import { Persona } from '../model/Persona';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
 //URL = 'https://datosportfolio.herokuapp.com/personas/';
-URL = 'https://basedatport.herokuapp.com/personas/';
+//URL = 'https://basedatport.herokuapp.com/persona/';
+//URL = environment.URL + 'persona/';
+URL='http://localhost:8080/persona/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public getPersona(): Observable<persona>{
+public lista(): Observable<Persona[]> 
+{
+ return this.httpClient.get<Persona[]>(this.URL + `lista`)
+}
 
-    return this.http.get<persona>(this.URL + `traer/perfil`);
-  }
+public details(id:number):Observable<Persona>
+{
+  return this.httpClient.get<Persona>(this.URL + `details/${id}`);
+}
 
+public save(persona: Persona): Observable<any>
+{
+  return this.httpClient.post<any>(this.URL + `crear`, persona);
+}
+
+public update(id: number ,persona:Persona): Observable<any>
+{
+  console.log(persona);
+  return this.httpClient.post<any>(this.URL + `update/${id}`, persona);
+}
+
+public delete(id:number):Observable<any>
+{
+  return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+}
  }
+
+
