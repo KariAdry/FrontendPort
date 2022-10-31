@@ -1,9 +1,43 @@
-<div class="row"  style="margin: 35px;"></div>
+<div class="row" style="margin: 35px;"></div>
 
 
 <H2>Acerca de:</H2>
 <div class="col-md-12" style="margin: 10px; background-color: #f1f0f5;">
 
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let Persona of pers">
+        <td>
+          <img src={{Persona.imagenURL}} class="card-img-top" style="height:100; width:100px ; " alt="...">
+        </td>
+
+        <td>
+          <h4>{{Persona.nombre}} {{Persona.apellido}}</h4>
+        </td>
+        <!--<td>
+          <h4>{{Persona.apellido}}</h4>
+        </td>-->
+        <td>{{Persona.descripcion}}</td>
+
+        <td>
+          <button class="btn btn-info" routerLink="edicionPersona/{{Persona.id}}" *ngIf="isLogged">
+
+            <i class="bi bi-pen"></i>EDICION</button>
+        </td>
+
+        <td *ngIf="isLogged">
+          <button class="btn btn-danger" (click)="delete(Persona.id, Persona.imagenPath)">
+            <i class="bi bi-trash"></i>BORRAR</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-outline-success" routerLink="/agregar" *ngIf="isLogged">Nueva Persona</button>
+</div>
+
+
+
+<!--
   <table class="table">
     <tbody>
       <tr>
@@ -23,6 +57,9 @@
         </td>
         <td>
 
+          <button type="button" class="btn btn-outline-success" routerLink="/agregar"
+     *ngIf="isLogged">Nueva instruccion</button>
+
           <button type="button" class="btn btn-outline-success" routerLink="/edicionPersona/{{pers.id}}"
             *ngIf="isLogged">Editar persona</button>
         </td>
@@ -38,7 +75,7 @@
 
 
 
-<!-- <ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush">
         <li class="list-group-item">Karina Alejandra Ortiz<br> de Ybarrola</li>
         <li class="list-group-item">Profesora de Ingles</li>
         <li class="list-group-item">Fullstack developer Jr</li>

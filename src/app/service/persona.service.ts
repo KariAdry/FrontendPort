@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PersonaService {
-//URL = 'https://datosportfolio.herokuapp.com/personas/';
+//URL = 'https://datosportfolio.herokuapp.com/persona/';
 //URL = 'https://basedatport.herokuapp.com/persona/';
 //URL = environment.URL + 'persona/';
 URL= environment.URL + 'persona/';

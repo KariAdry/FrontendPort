@@ -21,7 +21,7 @@ export class EditaracercadeComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.personaService.details(1).subscribe
+    this.personaService.details(id).subscribe
       (data => {
         this.persona = data;
 
