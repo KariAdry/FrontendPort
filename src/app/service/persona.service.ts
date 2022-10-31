@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/Persona';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class PersonaService {
 //URL = 'https://datosportfolio.herokuapp.com/personas/';
 //URL = 'https://basedatport.herokuapp.com/persona/';
 //URL = environment.URL + 'persona/';
-URL='http://localhost:8080/persona/';
+URL= environment.URL + 'persona/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -32,7 +33,7 @@ public save(persona: Persona): Observable<any>
 public update(id: number ,persona:Persona): Observable<any>
 {
   console.log(persona);
-  return this.httpClient.post<any>(this.URL + `update/${id}`, persona);
+  return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
 }
 
 public delete(id:number):Observable<any>

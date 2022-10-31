@@ -32,6 +32,7 @@ URL= environment.URL + 'educacion/';
 
   public update(id:number, educacion:Educacion):Observable<any>
   {
+    console.log(educacion);
     return this.httpClient.put<any>(this.URL + `update/${id}`,educacion);
   }
 

@@ -38,6 +38,7 @@ educacion : Educacion = null;
   onUpdate():void
   {
     const id = this.activatedRoute.snapshot.params['id'];
+    //console.log(this.educacion);
     this.educacionService.update(id, this.educacion).subscribe
     (
       data=>
@@ -55,7 +56,6 @@ educacion : Educacion = null;
   public loading: boolean = false;
 
   image: any[] = [];
-
 
   public reader2 = new FileReader();
 
