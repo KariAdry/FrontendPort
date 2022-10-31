@@ -11,9 +11,9 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
 //authURL = 'https://datosportfolio.herokuapp.com/auth/';
-//authURL = 'https://basedatport.herokuapp.com/auth/';
+authURL = 'https://basedatport.herokuapp.com/auth/';
 //URL =environment.URL + 'auth/';
-authURL= 'http://localhost:8080/auth/';
+//authURL= 'http://localhost:8080/auth/';
 
   constructor(private httpClient : HttpClient) { }
 

@@ -9,9 +9,9 @@ import { Conocimientos } from '../model/conocimientos';
 })
 export class SkillsService {
 //URL= 'https://datosportfolio.herokuapp.com/cono/';
-//URL= 'https://basedatport.herokuapp.com/cono/';
+URL= 'https://basedatport.herokuapp.com/cono/';
 //URL = environment.URL + 'cono/';
-URL='http://localhost:8080/cono/';
+//URL='http://localhost:8080/cono/';
 
   constructor(private httpClient : HttpClient) { }
 

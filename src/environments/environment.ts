@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL:'http://localhost:8080/',
+  //URL:'http://localhost:8080/',
   firebase: {
     apiKey: "AIzaSyAZD-HoCfuAaKBbxT6uBguHNdjjKWWODhA",
   authDomain: "frontendportfolio-b206c.firebaseapp.com",
@@ -15,7 +15,7 @@ export const environment = {
   },
  
   
- //URL:'https://basedatport.herokuapp.com/'
+ URL:'https://basedatport.herokuapp.com/'
 };
 
 /*

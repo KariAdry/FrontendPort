@@ -9,9 +9,9 @@ import { environment } from 'src/environments/environment';
 })
 export class PersonaService {
 //URL = 'https://datosportfolio.herokuapp.com/persona/';
-//URL = 'https://basedatport.herokuapp.com/persona/';
+ URL = 'https://basedatport.herokuapp.com/persona/';
 //URL = environment.URL + 'persona/';
-URL= environment.URL + 'persona/';
+//URL= environment.URL + 'persona/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -32,7 +32,6 @@ public save(persona: Persona): Observable<any>
 
 public update(id: number ,persona:Persona): Observable<any>
 {
-  console.log(persona);
   return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
 }
 

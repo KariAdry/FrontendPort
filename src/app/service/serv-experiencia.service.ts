@@ -11,9 +11,9 @@ import { ExperienciaLab } from '../model/experiencia-lab';
 export class ServExperienciaService {
 
   //expURL = 'https://datosportfolio.herokuapp.com/explab/';
-  //expURL = 'https://basedatport.herokuapp.com/explab/';
+  expURL = 'https://basedatport.herokuapp.com/explab/';
  //URL = environment.URL + 'explab/';  
- expURL= 'http://localhost:8080/explab/';
+ //expURL= 'http://localhost:8080/explab/';
 
   constructor(private httpClient: HttpClient) { }
 
