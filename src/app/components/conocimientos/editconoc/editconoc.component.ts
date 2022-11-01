@@ -33,7 +33,7 @@ conocim : Conocimientos= null;
     (data=>{this.router.navigate(['']);},
       err=>
       {
-        alert("Error al editar la experiencia");
+        alert("Error al editar conocimiento");
         this.router.navigate(['']);
       })
   }

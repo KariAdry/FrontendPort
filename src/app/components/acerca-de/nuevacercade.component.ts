@@ -34,7 +34,7 @@ public loading: boolean = true;
       alert("Persona agregada");
       this.router.navigate(['']);
     }, err=>{
-      alert("No pudo cxarfgarse la persona");
+      alert("No pudo agregarse la persona");
       this.router.navigate(['']);
     })
   }
